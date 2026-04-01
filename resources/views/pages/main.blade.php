@@ -30,7 +30,8 @@
     @if (in_array('hero', $sections))
         <section class="hero">
             <div class="img-cont">
-                <img src="storage/{{ $imgs['hero_img']['src'] }}" alt="{{ $imgs['hero_img']['alt'] }}" style="width:100%; height:auto; object-fit:cover;" />
+                <img src="storage/{{ $imgs['hero_img']['src'] }}" alt="{{ $imgs['hero_img']['alt'] }}"
+                    style="width:100%; height:auto; object-fit:cover;" />
             </div>
             <div class="text-box">
                 <h1>
@@ -64,7 +65,8 @@
             <div class="intro-body">
                 <div class="img-cont">
 
-                    <img src="storage/{{ $imgs['intro_img']['src'] }}" alt="{{ $imgs['intro_img']['alt'] }}" style="width:100%; height:100%; object-fit:cover;" />
+                    <img src="storage/{{ $imgs['intro_img']['src'] }}" alt="{{ $imgs['intro_img']['alt'] }}"
+                        style="width:100%; height:100%; object-fit:cover;" />
 
                 </div>
                 <div class="text-box">
@@ -103,79 +105,93 @@
                 {{ $site_translations->programme_vision }}
             </h2>
             <div class="programme-grid">
-                <article class="about top">
-                    <div class="img-cont">
-                        <img src="storage/{{ $imgs['programme_card_1']['src'] }}" alt="{{ $imgs['programme_card_1']['alt'] }}"
-                            style="width:100%; height:100%; object-fit:cover;" />
-                        <div class="title">
-                            <h3>
-                                {{ $site_translations->vision_card_1_title }}
-                            </h3>
-                            <div class="square"></div>
+                <div class="d-flex">
+                    <article class="about top">
+                        <div class="img-cont">
+                            <img src="storage/{{ $imgs['programme_card_1']['src'] }}"
+                                alt="{{ $imgs['programme_card_1']['alt'] }}"
+                                style="width:100%; height:100%; object-fit:cover;" />
+                            <div class="title">
+                                <h3>
+                                    {{ $site_translations->vision_card_1_title }}
+                                </h3>
+                                <div class="square"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="description">
-                        <p>
-                            {{ $site_translations->vision_card_1_text_1 }}
-                        </p>
-                        <br>
-                        <p>
-                            {{ $site_translations->vision_card_1_text_2 }}
-                        </p>
-                    </div>
-                </article>
-
-                <article class="goals bottom">
-                    <div class="img-cont">
-                        <img src="storage/{{ $imgs['programme_card_3']['src'] }}" alt="{{ $imgs['programme_card_3']['alt'] }}">
-                        <div class="title">
-                            <h3>{{ $site_translations->vision_card_2_title }}</h3>
-                            <div class="square"></div>
+                        <div class="description">
+                            <p>
+                                {{ $site_translations->vision_card_1_text_1 }}
+                            </p>
+                            <br>
+                            <p>
+                                {{ $site_translations->vision_card_1_text_2 }}
+                            </p>
                         </div>
-                    </div>
-                    <div class="description">
-                        <p>
-                            {{ $site_translations->vision_card_2_text_1 }}
-                        </p>
-                        <br>
-                        <p>
-                            {{ $site_translations->vision_card_2_text_2 }}
-                        </p>
-                    </div>
-                </article>
+                    </article>
 
-                <div class="spacebar">
-                    <img src="storage/{{ $imgs['programme_card_2']['src'] }}" alt="{{ $imgs['programme_card_2']['alt'] }}" />
+                    <article class="free-img">
+                        <img src="storage/{{ $imgs['programme_card_2']['src'] }}"
+                            alt="{{ $imgs['programme_card_2']['alt'] }}" />
+                    </article>
+
+                    <article class="goals bottom">
+                        <div class="img-cont">
+                            <img src="storage/{{ $imgs['programme_card_3']['src'] }}"
+                                alt="{{ $imgs['programme_card_3']['alt'] }}">
+                            <div class="title">
+                                <h3>{{ $site_translations->vision_card_2_title }}</h3>
+                                <div class="square"></div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p>
+                                {{ $site_translations->vision_card_2_text_1 }}
+                            </p>
+                            <br>
+                            <p>
+                                {{ $site_translations->vision_card_2_text_2 }}
+                            </p>
+                        </div>
+                    </article>
+
                 </div>
 
-                <article class="goals">
-                    <div class="img-cont">
+                <div class="spacebar"></div>
 
-                        <img src="storage/{{ $imgs['programme_card_4']['src'] }}" alt="{{ $imgs['programme_card_4']['alt'] }}">
 
-                        <div class="title">
-                            <h3>
-                                {{ $site_translations->vision_card_3_title }}
-                            </h3>
-                            <div class="square"></div>
+                <div class="d-flex programme-row-2">
+                    <article class="goals">
+                        <div class="img-cont">
+
+                            <img src="storage/{{ $imgs['programme_card_4']['src'] }}"
+                                alt="{{ $imgs['programme_card_4']['alt'] }}">
+
+                            <div class="title">
+                                <h3>
+                                    {{ $site_translations->vision_card_3_title }}
+                                </h3>
+                                <div class="square"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="description">
-                        <p>
-                            {{ $site_translations->vision_card_3_text_1 }}
-                        </p>
-                        <br>
-                        <p>
-                            {{ $site_translations->vision_card_3_text_2 }}
-                        </p>
-                    </div>
-                </article>
+                        <div class="description">
+                            <p>
+                                {{ $site_translations->vision_card_3_text_1 }}
+                            </p>
+                            <br>
+                            <p>
+                                {{ $site_translations->vision_card_3_text_2 }}
+                            </p>
+                        </div>
+                    </article>
 
-                <article class="img">
-                    <div class="img-cont">
-                        <img src="storage/{{ $imgs['programme_card_5']['src'] }}" alt="{{ $imgs['programme_card_5']['alt'] }}" />
-                    </div>
-                </article>
+                    <article class="img">
+                        <div class="img-cont">
+                            <img src="storage/{{ $imgs['programme_card_5']['src'] }}"
+                                alt="{{ $imgs['programme_card_5']['alt'] }}" />
+                        </div>
+                    </article>
+                </div>
+
             </div>
         </section>
     @endif
@@ -314,7 +330,7 @@
         </section>
     @endif
 
-    @if (in_array('team', $sections))
+    @if (in_array('team', $sections) and !$team->isEmpty())
         <section class="team" id="team">
             <div class="head">
                 <h2>The team</h2>
@@ -347,7 +363,7 @@
         </section>
     @endif
 
-    @if (in_array('mentor', $sections))
+    @if (in_array('mentor', $sections) and !$mentors->isEmpty())
         <section class="team mentor">
             <div class="head left">
                 <h2>
@@ -377,7 +393,7 @@
         </section>
     @endif
 
-    @if (in_array('faq', $sections))
+    @if (in_array('faq', $sections) and !$faqs->isEmpty())
         <section class="faq" id="faq">
             <div class="faq-content">
                 <h2>FAQ</h2>

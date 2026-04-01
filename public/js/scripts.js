@@ -7,6 +7,7 @@ function toggleMenu(){
     document.querySelector('header').classList.toggle('active')
     mobileNav.classList.toggle('active')
     burgerMenu.classList.toggle('active')
+    document.body.classList.toggle('header-active')
 }
 mobileNav.querySelectorAll("ul li").forEach(e => {
     e.addEventListener('click', function(){

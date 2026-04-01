@@ -18,7 +18,7 @@
     <x-header :menus="$menus" :site_translations="$site_translations"></x-header>
 
 
-    <x-mobile-nav></x-mobile-nav>
+    <x-mobile-nav :menus="$menus"></x-mobile-nav>
 
     <main class="container">
         @yield('content')

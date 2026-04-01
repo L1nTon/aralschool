@@ -1,5 +1,6 @@
+@props(['menus'])
 <div class="mobile-nav">
     <ul class="menu">
-        <x-navbar></x-navbar>
+        <x-navbar :menus="$menus"></x-navbar>
     </ul>
 </div>

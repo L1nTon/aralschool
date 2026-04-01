@@ -21,6 +21,10 @@
     scroll-behavior: smooth;
     scroll-margin-top: 150px;
 }
+.d-flex
+{
+    display: flex;
+}
 header a
 {
     text-decoration: none;
@@ -29,6 +33,10 @@ header a
 body
 {
     background: var(--bg-main);
+}
+body.header-active
+{
+    overflow: hidden;
 }
 li{list-style: none;}
 .lines .vertical-line
@@ -162,6 +170,12 @@ header nav .square
     height: 21px;
     background: #000;
 }
+
+header nav .aral-mobile-logo
+{
+    display: none;
+}
+
 .mobile-menu-btn
 {
     display: none;
@@ -229,10 +243,6 @@ header nav .square
     font-weight: 400;
     line-height: normal;
     text-decoration: none;
-}
-header nav .logo-mobile
-{
-    display: none;
 }
 header nav .logo-desktop
 {
@@ -599,6 +609,12 @@ header nav ul.desktop-menu li
     flex-wrap: wrap;
     gap: 25px;
     padding: 20px;
+    flex-direction: column;
+}
+.programme .programme-grid .programme-row-2
+{
+    justify-content: space-evenly;
+    align-items: center;
 }
 .programme .programme-grid article
 {
@@ -717,11 +733,24 @@ header nav ul.desktop-menu li
 .programme .programme-grid .spacebar
 {
     width: 100%;
-    height: 336px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 370px;
     margin-bottom: 0;
+    z-index: -1;
+}
+.programme .programme-grid>div
+{
+    width: 100%;
+    position: relative;
+    justify-content: space-between;
+}
+.programme .programme-grid .free-img
+{
+    width: 272px;
+    height: 336px;
+    position: absolute;
+    top: 333px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 
@@ -2239,11 +2268,15 @@ footer .organizer .text-box div.bot-cont
         align-items: baseline;
         padding: 22px 21px;
     }
-    header nav .logo-school
+    header nav .logo-school,
+    header nav .logo-aral,
+    header nav .square
     {
-        width: 100%;
-        display: flex;
-        justify-content: center;
+        display: none;
+    }
+    header nav .aral-mobile-logo
+    {
+        display: block;
     }
     .hero
     {
@@ -2261,12 +2294,31 @@ footer .organizer .text-box div.bot-cont
 
     .programme h2
     {
-        padding: 15px 0 0 25px;
+        padding: 30px 20px 14px 24px;
     }
     
     .programme .programme-grid
     {
         padding-top: 50px;
+    }
+
+    .programme .programme-grid>div
+    {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+    .programme .programme-grid .free-img
+    {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+    }
+
+    .programme .programme-grid .programme-row-2
+    {
+        flex-direction: column-reverse;
     }
 
     .programme .programme-grid article
@@ -2275,7 +2327,7 @@ footer .organizer .text-box div.bot-cont
     }
     .programme .programme-grid .spacebar
     {
-        margin-bottom: 0
+        display: none;
     }
 
     .outcomes .head
@@ -2610,10 +2662,6 @@ footer .organizer .text-box div.bot-cont
         width: 13px;
         height: 13px;
         left: 127px;
-    }
-    header nav .logo-mobile
-    {
-        display: block;
     }
     header nav .logo-desktop
     {
